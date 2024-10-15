@@ -55,6 +55,9 @@
                                         </constraints>
                                         <color key="minimumTrackTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.51797945209999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <color key="thumbTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.49510380990000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="onHeightChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="t5c-MW-Lgz"/>
+                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="xw8-bR-YUu">
                                         <rect key="frame" x="0.0" y="662" width="374" height="21"/>
@@ -83,12 +86,15 @@
                                         </constraints>
                                         <color key="minimumTrackTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.49890303940000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <color key="thumbTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.50481592470000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="onWeightChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="LjT-sx-Jic"/>
+                                        </connections>
                                     </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F0-S2-2nc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMT-Ya-YRk">
                                         <rect key="frame" x="0.0" y="763" width="374" height="51"/>
                                         <color key="backgroundColor" red="0.38587427140000002" green="0.37681865689999999" blue="0.61593395470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="51" id="Lxf-U2-TAr"/>
+                                            <constraint firstAttribute="height" constant="51" id="KqJ-xL-feU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="CALCULATE">
@@ -101,8 +107,8 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="onClickCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ks-t3-goo"/>
-                                            <segue destination="lkq-xS-Cin" kind="showDetail" id="8er-Xb-WvQ"/>
+                                            <action selector="onCalculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QED-em-dyD"/>
+                                            <segue destination="lkq-xS-Cin" kind="show" identifier="goToResult" id="Tj0-YA-dop"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -121,6 +127,12 @@
                             <constraint firstAttribute="trailing" secondItem="DpU-Gs-T27" secondAttribute="trailing" id="wXv-E8-Ye0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightSlider" destination="Pky-qY-oVp" id="Slx-GN-Nc4"/>
+                        <outlet property="heightValue" destination="Xcz-1j-2c9" id="T4F-Xa-d7B"/>
+                        <outlet property="weightSlider" destination="s2X-C5-Zcz" id="HcH-al-8SF"/>
+                        <outlet property="weightValue" destination="LTF-aL-8qu" id="rFs-4A-CyS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,6 +188,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculateAction:" destination="lkq-xS-Cin" eventType="touchUpInside" id="oAM-vp-f0G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wMZ-LG-Y4P"/>
@@ -192,13 +207,15 @@
                             <constraint firstItem="r83-N3-Ash" firstAttribute="leading" secondItem="A2l-zF-O8p" secondAttribute="leading" id="vIH-oq-YVf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tNY-qb-QmE"/>
                     <connections>
-                        <outlet property="resultValue" destination="VU9-2W-Sd5" id="wgB-iy-kFX"/>
+                        <outlet property="resultValue" destination="VU9-2W-Sd5" id="eHl-HI-guf"/>
+                        <outlet property="suggestLabel" destination="9IV-CT-mxw" id="9Qe-QN-Ems"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fn-rV-g4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="138"/>
+            <point key="canvasLocation" x="915.94202898550736" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>

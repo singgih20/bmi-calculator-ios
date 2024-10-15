@@ -9,11 +9,16 @@ import UIKit
 
 import Foundation
 class ResultViewController: UIViewController {
-    var result: String?
+    @IBOutlet weak var suggestLabel: UILabel!
+    var bmiResult: String?
     @IBOutlet weak var resultValue: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultValue.text = result
+        resultValue.text = bmiResult
+    }
+    
+    @IBAction func recalculateAction(_ sender: UIButton) {
+        
     }
 }
