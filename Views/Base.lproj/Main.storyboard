@@ -146,9 +146,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="r83-N3-Ash">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I5P-Pc-Lq3">
                                 <rect key="frame" x="89" y="354.5" width="236" height="177.5"/>
                                 <subviews>
@@ -198,19 +195,16 @@
                         <constraints>
                             <constraint firstItem="CO5-IF-rJM" firstAttribute="bottom" secondItem="wMZ-LG-Y4P" secondAttribute="bottom" id="3t0-T6-C7A"/>
                             <constraint firstItem="I5P-Pc-Lq3" firstAttribute="centerY" secondItem="A2l-zF-O8p" secondAttribute="centerY" id="7u5-hz-utT"/>
-                            <constraint firstAttribute="bottom" secondItem="r83-N3-Ash" secondAttribute="bottom" id="9I3-hS-3By"/>
-                            <constraint firstItem="r83-N3-Ash" firstAttribute="top" secondItem="A2l-zF-O8p" secondAttribute="top" id="GrP-GO-ygI"/>
-                            <constraint firstAttribute="trailing" secondItem="r83-N3-Ash" secondAttribute="trailing" id="JYI-qM-yI1"/>
                             <constraint firstItem="I5P-Pc-Lq3" firstAttribute="centerX" secondItem="A2l-zF-O8p" secondAttribute="centerX" id="Mv3-a5-v9e"/>
                             <constraint firstItem="CO5-IF-rJM" firstAttribute="leading" secondItem="A2l-zF-O8p" secondAttribute="leadingMargin" id="Tks-VE-ZdZ"/>
                             <constraint firstItem="CO5-IF-rJM" firstAttribute="trailing" secondItem="A2l-zF-O8p" secondAttribute="trailingMargin" id="hSB-9O-qvv"/>
-                            <constraint firstItem="r83-N3-Ash" firstAttribute="leading" secondItem="A2l-zF-O8p" secondAttribute="leading" id="vIH-oq-YVf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tNY-qb-QmE"/>
                     <connections>
-                        <outlet property="resultValue" destination="VU9-2W-Sd5" id="eHl-HI-guf"/>
-                        <outlet property="suggestLabel" destination="9IV-CT-mxw" id="9Qe-QN-Ems"/>
+                        <outlet property="adviceLabel" destination="9IV-CT-mxw" id="XKP-sZ-Dv7"/>
+                        <outlet property="resultValue" destination="VU9-2W-Sd5" id="oip-KH-gXo"/>
+                        <outlet property="viewParent" destination="A2l-zF-O8p" id="Mr3-Ui-JOR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fn-rV-g4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -220,6 +214,5 @@
     </scenes>
     <resources>
         <image name="calculate_background" width="375" height="812"/>
-        <image name="result_background" width="375" height="812"/>
     </resources>
 </document>
